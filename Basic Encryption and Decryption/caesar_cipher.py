@@ -12,5 +12,10 @@ def caesar(text, shift, alphabets):
     return text.translate(table)
 
 
-plan_text="This is a new text, Hello world!"
-print(caesar(plan_text, 7,[string.ascii_lowercase,string.ascii_uppercase,string.punctuation]))
+plan_text = input("Enter the text to encrypt: ")
+
+shift_value = int(input("Enter shift number: "))
+encrypted_text = caesar(plan_text, shift_value, [string.ascii_lowercase, string.ascii_uppercase, string.punctuation])
+
+print("\n--- Result ---")
+print("Encrypted text:", encrypted_text)
